@@ -1,0 +1,276 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Valoon';
+  src: url('Font/Valoon.ttf') format('truetype'); /* Adjust the path as needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Valoon', sans-serif;
+  overflow-x: hidden;
+  background-image: url('Images/jj.jpg'), url('Images/second-bg.jpg'), url('Images/third-bg.jpg');
+  background-size: cover, cover, cover;
+  background-attachment: fixed, fixed, fixed;
+  background-position: center, center, center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.main-container {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1500px;
+}
+
+.rotating-image {
+  width: 800px;
+  height: 800px;
+  transition: transform 0.1s linear;
+  filter: drop-shadow(0px 15px 20px rgba(0, 0, 0, 0.6));
+  border-radius: 20px;
+}
+
+/* Title Image Effects */
+.title-image img {
+  width: 450px;
+  height: auto;
+  animation: wobble 3s infinite ease-in-out; /* Adds a wobble effect */
+}
+
+.title-image, .title-image2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.title-image {
+  top: 40px;
+}
+
+.title-image2 {
+  top: 80px;
+}
+
+/* Yes Image Styling with Fun Hover Effect */
+.yes {
+  position: absolute;
+  top: 300px;
+  left: 200px;
+  width: 300px;
+  height: auto;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.6));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.yes:hover {
+  transform: scale(1.1); /* Bubble effect on hover */
+  filter: drop-shadow(0px 0px 20px rgba(255, 182, 193, 0.5)); /* Pink glow */
+}
+
+/* Right Image Styling with Hover Effect */
+/* Glowing effect for the right image on hover */
+/* Glowing effect for the right image on hover */
+/* Glowing effect for the right image on hover */
+/* Glowing effect for the right image on hover */
+.right {
+  position: absolute;
+  top: 300px;
+  right: 200px;
+  width: 300px;
+  height: auto;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.6));
+  transition: filter 0.3s ease;
+}
+
+.right:hover {
+  filter: drop-shadow(0px 0px 20px rgba(255, 105, 180, 0.8)) 
+          drop-shadow(0px 0px 30px rgba(255, 182, 193, 0.6)); /* Layered pink glow */
+}
+
+
+
+
+
+/* Product 1 Positioning and Hover Effect */
+.product:nth-child(1) {
+  flex-basis: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 700px;
+  margin-left: -60px;
+  position: relative;
+  top: 10px;
+  left: -310px;
+}
+
+.product:nth-child(1) img {
+  width: 2200px;
+  height: auto;
+  animation: pulse 1.5s infinite; /* Gently pulsing effect */
+}
+
+.product:nth-child(2) {
+  width: 150px;
+  height: auto;
+  margin-top: -900px;
+  margin-left: 1100px;
+  position: relative;
+  top: -300px;
+  left: -90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product:nth-child(3) img {
+  width: 750px;
+  height: auto;
+}
+
+.product:nth-child(3) {
+  width: 150px;
+  height: auto;
+  margin-top: -900px;
+  margin-left: 1100px;
+  position: relative;
+  top: 600px;
+  left: -90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product:nth-child(2) img {
+  width: 750px;
+  height: auto;
+}
+
+/* Product Container Styling */
+.product-container {
+  padding-bottom: 150px;
+}
+
+/* Products Section */
+.products {
+  padding-bottom: 50px;
+}
+/* Drop shadow for all product images */
+/* Enhanced drop shadow for all product images */
+.product img {
+  filter: drop-shadow(0px 15px 25px rgba(0, 0, 0, 0.5)); /* Bolder shadow with larger blur and opacity */
+}
+
+
+
+/* Disclaimer Styling with Glowing Effect */
+.disclaimer {
+  margin-top: 1100px;
+  padding: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #ff0088;
+  position: relative;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+/* Footer Styling */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(90deg, pink, purple);
+  color: white;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 10;
+  opacity: 0.7;
+}
+
+/* Scrolling text and images */
+.scrolling-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  white-space: nowrap;
+  animation: scroll 30s linear infinite;
+}
+
+/* Footer Text Styling with Bounce */
+.footer span {
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff66a0, #ff0088);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  animation: bounce 1s ease infinite alternate;
+}
+
+/* Footer Image Styling */
+.footer-image {
+  width: 30px;
+  height: auto;
+}
+
+/* Animations */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes wobble {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 182, 193, 0.5), 0 0 10px rgba(255, 182, 193, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 182, 193, 1), 0 0 20px rgba(255, 182, 193, 1);
+  }
+}
